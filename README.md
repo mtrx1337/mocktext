@@ -7,12 +7,16 @@ HeLlO WoRlD!
 
 # Build
 
-`cargo build`
+```
+cargo build
+```
 
 # Install (for now)
 
-`cargo install .`
-`sudo ln -s ./target/release/mocktext /usr/bin/`
+```bash
+cargo install .
+sudo ln -s ./target/release/mocktext /usr/bin/
+```
 
 # Why
 
