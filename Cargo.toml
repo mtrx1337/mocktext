@@ -1,6 +1,6 @@
 [package]
 name = "mocktext"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Leonard Lorenz <bi0m3tr1xx@gmail.com>"]
 edition = "2018"
 
