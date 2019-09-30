@@ -15,9 +15,9 @@ fn main() {
                 // reversed character casing
                 "-r" => {
                     reversed = true;
-                    read_from_stdin(reversed)
+                    read_from_stdin(reversed);
                 },
-                _ => (),
+                _ => read_from_stdin(reversed),
             }
         }
     }
