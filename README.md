@@ -11,11 +11,11 @@ HeLlO WoRlD!
 cargo build
 ```
 
-# Install (for now)
+# Install
 
 ```bash
-cargo install .
-sudo ln -s ./target/release/mocktext /usr/bin/
+cargo build
+cargo install --path .
 ```
 
 # Why
