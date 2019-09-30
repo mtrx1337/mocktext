@@ -10,11 +10,13 @@ fn main() {
     } else {
         for arg in args {
             match arg.as_str() {
-                "-h" => show_help(), // print help
+                // print help
+                "-h" => show_help(),
+                // reversed character casing
                 "-r" => {
                     reversed = true;
                     read_from_stdin(reversed)
-                }, // reversed character casing
+                },
                 _ => (),
             }
         }
