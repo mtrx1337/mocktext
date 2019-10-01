@@ -11,15 +11,18 @@ fn main() {
         for arg in args {
             match arg.as_str() {
                 // print help
-                "-h" => show_help(),
+                "-h" => {
+                    show_help();
+                    std::process::exit(0);
+                },
                 // reversed character casing
                 "-r" => {
                     reversed = true;
-                    read_from_stdin(reversed);
                 },
-                _ => read_from_stdin(reversed),
+                _ => (),
             }
         }
+        read_from_stdin(reversed);
     }
 }
 
@@ -57,12 +60,12 @@ fn read_from_stdin(reversed : bool) {
 
 fn show_help() {
     println!("\
-SYNOPSIS:
-\tEither hand over text via standard in:
-\t\techo 'text' | mocktext\n
-\tOr execute mocktext on it's own and just type text into the terminal:
-\t\t$ mocktext
-\t\t> techno isn't real music
-\t\t  TeChNo iSn'T ReAl mUsIc
-");
+        SYNOPSIS:\n\
+        \tEither hand over text via standard in:\n\
+        \t\techo 'text' | mocktext\n\
+        \tOr execute mocktext on it's own and just type text into the terminal:\n\
+        \t\t$ mocktext\n\
+        \t\t> techno isn't real music\n\
+        \t\t  TeChNo iSn'T ReAl mUsIc"
+        );
 }

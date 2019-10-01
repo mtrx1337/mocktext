@@ -1,8 +1,15 @@
 # What does it do
 
-```
+```bash
 $ echo "hello world!" | mocktext
 HeLlO WoRlD!
+$ echo "hello world!" | mocktext -r
+hElLo wOrLd!
+$ mocktext
+>hello world!
+HeLlO WoRlD!
+$ mocktext -h
+<prints help>
 ```
 
 # Build
@@ -14,7 +21,7 @@ cargo build
 # Install
 
 ```bash
-cargo build
+cargo build --release
 cargo install --path .
 ```
 
